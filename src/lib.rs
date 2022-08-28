@@ -488,7 +488,7 @@ mod tests {
 
     #[test]
     fn it_should_read_properly() {
-        let bytecode = std::fs::read("D:\\dm\\res-decoder\\temp\\src\\bytecodes\\Sys.lua").unwrap();
+        let bytecode = std::fs::read("temp\\src\\bytecodes\\Sys.lua").unwrap();
         let (_, dump) = Dump::from_bytes((&bytecode, 0)).unwrap();
         let bytes = dump.to_bytes().unwrap();
         Dump::from_bytes((&bytes, 0)).unwrap();
